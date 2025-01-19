@@ -1,0 +1,129 @@
+Week 2: Intermediate Java Concepts
+Day 8: OOP - Advanced Concepts
+Objective: Explore deeper OOP principles.
+
+Topics:
+Inheritance in Java
+Polymorphism (Method Overriding and Overloading)
+Encapsulation (private/public methods)
+Abstraction (Abstract classes and Interfaces)
+Day 9: Arrays and Strings
+Objective: Understand how to work with arrays and strings in Java.
+
+Topics:
+Creating and accessing arrays
+String manipulation methods (substring, indexOf, concat, etc.)
+Multi-dimensional arrays
+StringBuilder vs String
+Day 10: Collections Framework - Lists, Sets, and Maps
+Objective: Learn about Java’s built-in collections.
+
+Topics:
+List interface and ArrayList, LinkedList
+Set interface and HashSet, TreeSet
+Map interface and HashMap, TreeMap
+Day 11: Exception Handling in Java
+Objective: Handle errors and exceptions in Java.
+
+Topics:
+try, catch, and finally blocks
+Throwing exceptions with throw keyword
+Creating custom exceptions
+Day 12: File Handling in Java
+Objective: Learn file input/output in Java.
+
+Topics:
+Reading and writing text files (BufferedReader, FileWriter)
+Handling binary files (FileInputStream, FileOutputStream)
+Using File class for file operations (create, delete, rename)
+Day 13: Working with Threads
+Objective: Understand multithreading in Java.
+
+Topics:
+Creating threads by extending Thread class and implementing Runnable interface
+Synchronization in multithreading
+Thread life cycle
+Day 14: Review and Practice
+Objective: Practice basic Java problems.
+
+Tasks:
+Solve coding problems on platforms like HackerRank or LeetCode (beginner to intermediate level)
+Practice exercises on OOP, arrays, collections, and file handling
+Week 3: Advanced Java Concepts
+Day 15: Database Connectivity (JDBC)
+Objective: Connect to databases using Java.
+
+Topics:
+Introduction to JDBC
+Connecting to a database (MySQL, SQLite)
+Executing queries (SELECT, INSERT, UPDATE, DELETE)
+Using PreparedStatement and ResultSet
+Day 16: JavaFX for GUI Development
+Objective: Learn GUI development in Java.
+
+Topics:
+Introduction to JavaFX
+Creating basic GUI components (buttons, labels, text fields)
+Event handling in JavaFX
+Day 17: Lambda Expressions and Stream API
+Objective: Work with functional programming in Java.
+
+Topics:
+Introduction to Lambda expressions
+Functional interfaces and Predicate, Consumer, Function
+Using Stream API for data manipulation
+Day 18: Networking in Java
+Objective: Learn how to work with networking in Java.
+
+Topics:
+Working with sockets in Java
+Client-server communication
+Sending and receiving data via sockets
+Day 19: Unit Testing in Java (JUnit)
+Objective: Learn how to write unit tests for Java code.
+
+Topics:
+Introduction to JUnit framework
+Writing test cases and assertions
+Running tests with JUnit
+Day 20: Design Patterns in Java
+Objective: Learn common design patterns.
+
+Topics:
+Singleton pattern
+Factory pattern
+Observer pattern
+Strategy pattern
+Day 21: Review and Practice
+Objective: Consolidate all Java knowledge.
+
+Tasks:
+Solve advanced Java problems on platforms like HackerRank or LeetCode
+Implement the concepts learned through small projects or exercises
+Week 4: Mini Projects and Final Project
+Day 22-23: Mini Project 1 - Library Management System
+Objective: Create a simple library management system.
+
+Tasks:
+Add, remove, and list books
+Store book details in a file or database
+Implement user login and authentication
+Day 24-25: Mini Project 2 - Chat Application
+Objective: Build a simple chat application using Java.
+
+Tasks:
+Implement client-server communication using sockets
+Send and receive messages between clients
+Handle multiple clients with multithreading
+Day 26-27: Mini Project 3 - Calculator with GUI
+Objective: Build a calculator with a JavaFX GUI.
+
+Tasks:
+Design a simple calculator interface
+Implement the arithmetic logic behind the GUI
+Day 28-30: Final Project
+Objective: Apply all concepts learned in a comprehensive final project.
+
+Tasks:
+Build a small Java application combining file handling, GUI, databases, and exception handling.
+Test and debug the project thoroughly.

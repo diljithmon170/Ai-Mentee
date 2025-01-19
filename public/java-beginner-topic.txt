@@ -1,0 +1,55 @@
+Week 1: Java Basics and Fundamentals
+Day 1: Introduction to Java and Setup
+Objective: Understand Java and set up the environment.
+
+Topics:
+What is Java? Overview and uses
+Installing JDK and setting up an IDE (e.g., IntelliJ IDEA, Eclipse)
+Writing and running your first Java program ("Hello, World!")
+Understanding the Java compiler and execution flow
+Day 2: Java Syntax, Variables, and Data Types
+Objective: Learn about variables and basic data types.
+
+Topics:
+Variables and constants in Java
+Basic data types (int, float, char, boolean)
+Type conversion (casting between data types)
+Arithmetic operations with variables
+Day 3: Operators in Java
+Objective: Get familiar with operators in Java.
+
+Topics:
+Arithmetic operators (+, -, *, /, %, ++, --)
+Comparison operators (==, !=, >, <, >=, <=)
+Logical operators (&&, ||, !)
+Assignment operators (+=, -=, *=, /=)
+Day 4: Control Flow - Conditional Statements
+Objective: Understand how to control the flow of a program.
+
+Topics:
+if, else, and else-if statements
+Nested conditions
+Switch statements
+Day 5: Loops - Introduction
+Objective: Learn about loops in Java.
+
+Topics:
+while loop
+for loop
+do-while loop
+Break and continue statements
+Day 6: Functions and Methods in Java
+Objective: Understand how to define and use functions in Java.
+
+Topics:
+Defining methods and functions
+Method parameters and return types
+Overloading functions
+Method scope and static methods
+Day 7: Object-Oriented Programming (OOP) Concepts - Introduction
+Objective: Learn basic OOP concepts.
+
+Topics:
+Introduction to classes and objects
+Instance variables and methods
+Constructors in Java

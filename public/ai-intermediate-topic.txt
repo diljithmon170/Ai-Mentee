@@ -1,0 +1,44 @@
+Week 2: Intermediate AI Concepts
+Day 8: Decision Trees and Random Forest
+Objective: Learn tree-based algorithms.
+
+Topics:
+Understanding decision trees and entropy
+Random Forests and ensemble learning
+Day 9: Support Vector Machines (SVM)
+Objective: Understand SVM.
+
+Topics:
+Linear and non-linear classification with kernels
+Hyperplanes and support vectors
+Day 10: K-Nearest Neighbors (KNN)
+Objective: Learn KNN algorithm.
+
+Topics:
+Working with distance metrics
+Choosing the right value for k
+Day 11: Unsupervised Learning - K-means Clustering
+Objective: Explore clustering techniques.
+
+Topics:
+K-means algorithm
+Determining optimal k value (Elbow method)
+Day 12: Neural Networks Basics
+Objective: Understand the basics of neural networks.
+
+Topics:
+Neurons, layers, activation functions
+Forward propagation and backpropagation
+Day 13: Deep Learning Introduction
+Objective: Learn about deep learning models.
+
+Topics:
+Convolutional Neural Networks (CNNs)
+Recurrent Neural Networks (RNNs)
+Basics of TensorFlow/Keras
+Day 14: Review and Practice
+Objective: Reinforce machine learning algorithms.
+
+Tasks:
+Solve machine learning challenges on Kaggle
+Implement algorithms like SVM, KNN, and decision trees

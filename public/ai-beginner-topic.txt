@@ -1,0 +1,46 @@
+Week 1: Introduction to AI and Machine Learning
+Day 1: What is AI?
+Objective: Understand the basics of AI.
+
+Topics:
+History and types of AI (Weak AI, Strong AI)
+Applications of AI in real life (Healthcare, Robotics, Natural Language Processing)
+Day 2: Machine Learning Basics
+Objective: Introduction to ML concepts.
+
+Topics:
+Supervised vs Unsupervised learning
+Types of algorithms: Classification, Regression, Clustering
+Day 3: Python for AI
+Objective: Setting up the Python environment for AI development.
+
+Topics:
+Installing libraries: NumPy, Pandas, Scikit-learn, Matplotlib
+Data manipulation with Pandas and NumPy
+Visualization with Matplotlib
+Day 4: Data Preprocessing and Feature Engineering
+Objective: Learn about data preprocessing techniques.
+
+Topics:
+Handling missing data
+Feature scaling (Normalization, Standardization)
+Encoding categorical variables
+Day 5: Linear Regression
+Objective: Understand Linear Regression.
+
+Topics:
+Simple linear regression and model training
+Cost function and gradient descent
+Evaluating model performance (RMSE, MAE)
+Day 6: Classification Algorithms - Logistic Regression
+Objective: Learn Logistic Regression.
+
+Topics:
+Sigmoid function and binary classification
+Evaluating classification performance (Accuracy, Precision, Recall)
+Day 7: Review and Practice
+Objective: Reinforce learning with practice.
+
+Tasks:
+Work on regression and classification problems in Python
+Use Scikit-learn to implement basic models

@@ -1,0 +1,144 @@
+Week 2: Intermediate Concepts
+Day 8: Functions - Advanced Concepts
+
+Objective: Dive deeper into functions and understand more advanced concepts.
+Topics:
+Default function arguments
+Keyword arguments
+Variable-length arguments (*args, **kwargs)
+Lambda functions (anonymous functions)
+Day 9: Working with Strings - Basics
+
+Objective: Master basic string manipulation.
+Topics:
+String creation and basic operations
+String slicing and indexing
+String methods (upper(), lower(), replace(), strip(), etc.)
+String formatting (f-strings, format(), concatenation)
+Day 10: Working with Strings - Advanced
+
+Objective: Learn advanced string operations.
+Topics:
+Multi-line strings
+String encoding and decoding
+Regular expressions (Basic re module usage)
+Day 11: Lists - Basics
+
+Objective: Learn how to work with lists.
+Topics:
+Creating lists, accessing elements
+List indexing and slicing
+List methods (append(), insert(), remove(), pop())
+Understanding nested lists
+Day 12: Lists - Advanced
+
+Objective: Explore more list operations.
+Topics:
+List comprehensions (e.g., generating even numbers)
+Sorting and reversing lists
+Working with lists in loops
+List methods (extend(), count(), index(), copy())
+Day 13: Tuples and Sets
+
+Objective: Understand the difference between lists, tuples, and sets.
+Topics:
+Creating and accessing tuples
+Tuple unpacking
+Set creation and operations (union, intersection, difference)
+Set vs List: Advantages and use cases
+Day 14: Dictionaries
+
+Objective: Master the usage of dictionaries.
+Topics:
+Creating and accessing dictionaries
+Adding, updating, and deleting items in dictionaries
+Dictionary methods (keys(), values(), items())
+Iterating over dictionaries
+Week 3: Intermediate Python Concepts
+Day 15: File Handling - Basics
+
+Objective: Learn how to read and write files.
+Topics:
+Opening files (read, write, append modes)
+Reading files (read(), readline(), readlines())
+Writing to files (write(), writelines())
+Closing files
+Day 16: File Handling - Advanced
+
+Objective: Work with files in more complex ways.
+Topics:
+Using the with open() context manager
+File manipulation (copy, rename, delete)
+Reading and writing binary files
+Day 17: Error Handling - Exceptions
+
+Objective: Learn how to handle errors in Python.
+Topics:
+try, except blocks
+Handling multiple exceptions
+finally clause (always runs after try/except)
+Raising exceptions manually (raise keyword)
+Day 18: Working with Modules and Libraries
+
+Objective: Understand how to import and use libraries.
+Topics:
+Importing standard libraries (math, datetime, os, sys)
+Installing external libraries with pip
+Creating your own modules
+Using import and from keywords
+Day 19: Object-Oriented Programming (OOP) Basics
+
+Objective: Learn the principles of object-oriented programming.
+Topics:
+Introduction to classes and objects
+Instance variables and methods
+The self keyword
+Creating your first class and object
+Day 20: Object-Oriented Programming - Advanced
+
+Objective: Dive deeper into OOP concepts.
+Topics:
+Constructors (__init__)
+Inheritance and method overriding
+Encapsulation and abstraction
+Polymorphism in Python
+Day 21: Review and Practice
+
+Objective: Review all topics learned so far and practice solving problems.
+Tasks:
+Solve beginner-level coding problems on platforms like HackerRank or LeetCode
+Practice exercises on all topics covered
+Week 4: Applying Python Knowledge and Mini Projects
+Day 22-23: Mini Project 1 - Basic Calculator
+
+Objective: Create a simple calculator program.
+Tasks:
+Implement basic arithmetic operations (addition, subtraction, multiplication, division)
+Handle invalid inputs with error handling
+Allow the user to perform multiple calculations in one run
+Day 24-25: Mini Project 2 - To-Do List Application
+
+Objective: Build a to-do list application.
+Tasks:
+Add, view, and delete tasks
+Store tasks in a text file
+Use functions to handle task operations
+Day 26-27: Mini Project 3 - Number Guessing Game
+
+Objective: Build a number guessing game.
+Tasks:
+Generate a random number and prompt the user to guess
+Provide hints if the guess is too high or too low
+Track the number of attempts and display a success message
+Day 28: Practice Problem Solving
+
+Objective: Strengthen problem-solving skills.
+Tasks:
+Solve more intermediate problems (e.g., string manipulation, lists, and dictionaries)
+Apply learned concepts to real-life problems
+Day 29-30: Final Project - Basic Application
+
+Objective: Apply everything you’ve learned in a final small project.
+Tasks:
+Build a small project that combines multiple concepts (e.g., a text-based game, a simple management system, etc.)
+Test your project and ensure all components work together

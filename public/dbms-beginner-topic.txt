@@ -1,0 +1,47 @@
+Week 1: Introduction to DBMS and SQL Basics
+Day 1: Introduction to DBMS
+Objective: Understand the basics of DBMS.
+
+Topics:
+What is DBMS? Types of DBMS (Hierarchical, Network, Relational)
+DBMS architecture
+Overview of database management systems and database models
+Day 2: Relational Database Model
+Objective: Learn about the relational model.
+
+Topics:
+Tables, rows, columns, and relationships
+Primary key, foreign key, and candidate key
+Relational schema and constraints
+Day 3: SQL Basics - SELECT Statement
+Objective: Start with SQL queries.
+
+Topics:
+SELECT statement and retrieving data from tables
+Filtering data using WHERE clause
+Sorting results using ORDER BY clause
+Day 4: SQL Joins
+Objective: Learn how to combine tables.
+
+Topics:
+INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN
+Using JOIN with multiple tables
+Aliases and renaming tables/columns
+Day 5: SQL Aggregate Functions
+Objective: Perform aggregation on data.
+
+Topics:
+Functions like COUNT(), SUM(), AVG(), MAX(), MIN()
+GROUP BY and HAVING clauses
+Day 6: SQL Subqueries
+Objective: Understand subqueries.
+
+Topics:
+Subqueries in SELECT, WHERE, and FROM clauses
+Correlated vs non-correlated subqueries
+Day 7: Review and Practice
+Objective: Solve basic SQL problems.
+
+Tasks:
+Solve SQL problems on platforms like HackerRank or LeetCode
+Practice SELECT, JOIN, GROUP BY, and aggregate functions

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        form {
+            margin: 20px auto;
+        }
+        .video {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>YouTube Video Finder</h1>
+    <form action="/search" method="POST">
+        <input type="text" name="topic" placeholder="Enter a topic (e.g., NLP, AI)" required>
+        <button type="submit">Search</button>
+    </form>
+    <hr>
+    <div>
+        <% if (videos.length > 0) { %>
+            <h2>Search Results</h2>
+            <% videos.forEach(video => { %>
+                <div class="video">
+                    <a href="<%= video.url %>" target="_blank"><%= video.title %></a>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p>No results found. Try searching for something else!</p>
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+Week 1: Python Basics and Fundamentals
+Day 1: Introduction to Python and Setup
+
+Objective: Understand Python and set up the environment.
+Topics:
+What is Python? Overview and Uses
+Installing Python and setting up an IDE (e.g., VS Code, PyCharm)
+Writing and running your first Python program ("Hello, World!")
+Understanding the Python interpreter and REPL (Read-Eval-Print Loop)
+Day 2: Python Syntax, Variables, and Data Types
+
+Objective: Learn about variables and basic data types.
+Topics:
+Variables in Python and assignment
+Basic data types (int, float, str, bool)
+Type conversion (casting between data types)
+Arithmetic operations with variables
+Day 3: Operators in Python
+
+Objective: Get familiar with different operators.
+Topics:
+Arithmetic operators (+, -, *, /, %, **, //)
+Comparison operators (==, !=, >, <, >=, <=)
+Logical operators (and, or, not)
+Assignment operators (+=, -=, *=, /=)
+Day 4: Control Flow - Conditional Statements
+
+Objective: Understand how to control the flow of a program.
+Topics:
+if, elif, else statements
+Nested conditions
+Logical operators in conditions
+Practical examples (e.g., checking even/odd, temperature checker)
+Day 5: Loops - Introduction
+
+Objective: Learn about loops in Python.
+Topics:
+while loop
+for loop
+The range() function
+Looping through lists and strings
+Day 6: Loops - Advanced
+
+Objective: Get comfortable with advanced looping concepts.
+Topics:
+break, continue, pass
+Nested loops
+Iterating over collections (lists, strings, and ranges)
+Day 7: Functions in Python
+
+Objective: Understand the importance of functions and how to use them.
+Topics:
+Defining functions using def keyword
+Function arguments and return values
+Function scope (local and global variables)
+Writing simple functions (e.g., calculate factorial)

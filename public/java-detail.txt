@@ -1,0 +1,321 @@
+### **Java Study Plan: Detailed Content**
+
+---
+
+### **Week 1: Java Basics and Fundamentals**
+
+#### **Day 1: Introduction to Java and Setup**
+- **What is Java?**
+  - **Definition:** Java is a general-purpose, object-oriented programming language developed by Sun Microsystems (now owned by Oracle). It is designed to be platform-independent, meaning it can run on any platform with the Java Virtual Machine (JVM) installed.
+  - **Uses:** Java is widely used for building desktop applications, mobile applications (Android), web applications, and enterprise-level systems.
+- **Setting up Java Development Environment:**
+  - Install **Java Development Kit (JDK)** from Oracle’s official website.
+  - **IDE Options:** Install an Integrated Development Environment (IDE) like Eclipse, IntelliJ IDEA, or NetBeans to write and run Java programs.
+  - **Environment Variables:** Configure the `JAVA_HOME` and `PATH` environment variables to point to the JDK.
+- **First Java Program:**
+  - Writing a simple program that prints "Hello, World!" to the console:
+    ```java
+    public class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!");
+        }
+    }
+    ```
+  - **Explanation:** The `public class` defines a class, and `main` is the entry point of the program. `System.out.println` prints the text to the console.
+
+- **Java Compilation Process:**
+  - Java code is written in `.java` files, which are compiled into bytecode (`.class` files) by the Java compiler (`javac`).
+  - The bytecode is executed on the JVM, which makes Java platform-independent.
+
+---
+
+#### **Day 2: Java Syntax, Variables, and Data Types**
+- **Variables:**
+  - Variables store data. You define them by specifying a **data type** and a **variable name**.
+  - Example:
+    ```java
+    int age = 25;
+    double salary = 55000.50;
+    boolean isActive = true;
+    ```
+  - **Naming Conventions:** Variable names should be meaningful and follow camelCase notation.
+  
+- **Data Types:**
+  - **Primitive Data Types:** 
+    - `int` (integer), `double` (floating-point numbers), `char` (single characters), `boolean` (true/false)
+  - **Non-primitive Data Types:** 
+    - Arrays, Strings, Classes, Interfaces
+  - **Type Conversion (Casting):**
+    - Implicit casting (widening) and explicit casting (narrowing).
+    ```java
+    int num = 10;
+    double decimal = num;  // Implicit casting (int to double)
+    int newNum = (int) decimal;  // Explicit casting (double to int)
+    ```
+
+---
+
+#### **Day 3: Operators in Java**
+- **Arithmetic Operators:**
+  - Used for basic math operations: `+`, `-`, `*`, `/`, `%`, `++`, `--`.
+  - Example:
+    ```java
+    int sum = 5 + 3;
+    int result = 10 / 2;
+    int remainder = 10 % 3;
+    ```
+
+- **Relational Operators:**
+  - Used to compare values: `==`, `!=`, `>`, `<`, `>=`, `<=`.
+  - Example:
+    ```java
+    boolean isEqual = (5 == 5);  // true
+    boolean isGreater = (5 > 3);  // true
+    ```
+
+- **Logical Operators:**
+  - Used to combine multiple conditions: `&&` (AND), `||` (OR), `!` (NOT).
+  - Example:
+    ```java
+    boolean result = (5 > 3 && 8 < 10);  // true
+    ```
+
+- **Assignment Operators:**
+  - Used to assign values to variables: `=`, `+=`, `-=`, `*=`, `/=`.
+  - Example:
+    ```java
+    int x = 5;
+    x += 3;  // x = x + 3, so x becomes 8
+    ```
+
+---
+
+#### **Day 4: Control Flow - Conditional Statements**
+- **if-else Statements:**
+  - Used to execute code based on conditions. 
+    ```java
+    if (age > 18) {
+        System.out.println("Adult");
+    } else {
+        System.out.println("Not an adult");
+    }
+    ```
+
+- **switch Statement:**
+  - Used when multiple conditions need to be evaluated.
+    ```java
+    switch (dayOfWeek) {
+        case 1:
+            System.out.println("Monday");
+            break;
+        case 2:
+            System.out.println("Tuesday");
+            break;
+        default:
+            System.out.println("Invalid day");
+    }
+    ```
+
+- **Nested Conditions:**
+  - Conditions within conditions for more complex decision-making.
+    ```java
+    if (age > 18) {
+        if (isStudent) {
+            System.out.println("Adult Student");
+        } else {
+            System.out.println("Adult");
+        }
+    }
+    ```
+
+---
+
+#### **Day 5: Loops - Introduction**
+- **while Loop:**
+  - Used for repeating a block of code while a condition is true.
+    ```java
+    int i = 0;
+    while (i < 5) {
+        System.out.println(i);
+        i++;
+    }
+    ```
+
+- **for Loop:**
+  - Used for repeating a block of code a set number of times.
+    ```java
+    for (int i = 0; i < 5; i++) {
+        System.out.println(i);
+    }
+    ```
+
+- **do-while Loop:**
+  - Similar to `while`, but executes at least once before checking the condition.
+    ```java
+    int i = 0;
+    do {
+        System.out.println(i);
+        i++;
+    } while (i < 5);
+    ```
+
+---
+
+#### **Day 6: Functions and Methods in Java**
+- **Defining Methods:**
+  - Methods are blocks of code that perform specific tasks.
+    ```java
+    public static void greet() {
+        System.out.println("Hello, World!");
+    }
+    ```
+  - **Arguments and Return Types:**
+    - Methods can accept parameters and return values.
+    ```java
+    public static int addNumbers(int a, int b) {
+        return a + b;
+    }
+    ```
+  - **Calling Methods:**
+    ```java
+    int sum = addNumbers(3, 5);
+    ```
+
+- **Method Overloading:**
+  - Multiple methods with the same name but different parameters.
+    ```java
+    public static int add(int a, int b) {
+        return a + b;
+    }
+    public static double add(double a, double b) {
+        return a + b;
+    }
+    ```
+
+---
+
+#### **Day 7: Object-Oriented Programming (OOP) Concepts - Introduction**
+- **Classes and Objects:**
+  - **Class:** A blueprint for creating objects.
+  - **Object:** An instance of a class.
+    ```java
+    class Car {
+        String model;
+        int year;
+
+        public void start() {
+            System.out.println("Car started");
+        }
+    }
+    Car myCar = new Car();
+    myCar.model = "Toyota";
+    myCar.year = 2020;
+    myCar.start();
+    ```
+
+- **Constructors:**
+  - Special methods used to initialize objects.
+    ```java
+    class Car {
+        String model;
+        int year;
+
+        public Car(String model, int year) {
+            this.model = model;
+            this.year = year;
+        }
+    }
+    Car myCar = new Car("Toyota", 2020);
+    ```
+
+---
+
+### **Week 2: Intermediate Java Concepts**
+
+#### **Day 8: OOP - Advanced Concepts**
+- **Inheritance:**
+  - Allows one class to inherit the properties and methods of another class.
+    ```java
+    class Animal {
+        void sound() {
+            System.out.println("Animal makes a sound");
+        }
+    }
+    class Dog extends Animal {
+        void sound() {
+            System.out.println("Dog barks");
+        }
+    }
+    ```
+- **Polymorphism:**
+  - The ability of an object to take many forms. Example: Method overriding (inherited methods with different implementations).
+    ```java
+    Animal myAnimal = new Dog();
+    myAnimal.sound();  // Dog barks
+    ```
+
+- **Encapsulation:**
+  - Hiding the internal state of an object and providing access through methods.
+    ```java
+    class Car {
+        private String model;
+
+        public String getModel() {
+            return model;
+        }
+
+        public void setModel(String model) {
+            this.model = model;
+        }
+    }
+    ```
+
+- **Abstraction:**
+  - Hiding the complexity and showing only the essential features.
+  - Example: Abstract classes and interfaces.
+    ```java
+    abstract class Animal {
+        abstract void sound();
+    }
+    class Dog extends Animal {
+        void sound() {
+            System.out.println("Dog barks");
+        }
+    }
+    ```
+
+---
+
+#### **Day 9: Arrays and Strings**
+- **Arrays:**
+  - Arrays are used to store multiple values in a single variable.
+    ```java
+    int[] numbers = {1, 2, 3, 4, 5};
+    System.out.println(numbers[0]);  // Output: 1
+    ```
+
+- **Strings:**
+  - Strings are objects that store sequences of characters.
+    ```java
+    String message = "Hello, World!";
+    System.out.println
+
+(message.length());
+    ```
+
+---
+
+#### **Day 10: Exception Handling**
+- **Try-Catch Block:**
+  - Used to handle exceptions (errors during runtime).
+    ```java
+    try {
+        int result = 10 / 0;
+    } catch (ArithmeticException e) {
+        System.out.println("Error: Division by zero");
+    }
+    ```
+
+---
+
+Let me know if you'd like me to continue with additional weeks or specific topics!

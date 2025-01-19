@@ -1,0 +1,47 @@
+Week 2: Intermediate DBMS Concepts
+Day 8: Normalization
+Objective: Learn the importance of normalization.
+
+Topics:
+1st, 2nd, and 3rd Normal Forms
+Functional dependencies
+Normalization vs denormalization
+Day 9: Indexing and Searching
+Objective: Learn indexing in DBMS.
+
+Topics:
+B-tree and Hash indexing
+Primary and secondary indexes
+Query optimization with indexes
+Day 10: Transactions in DBMS
+Objective: Understand transactions and ACID properties.
+
+Topics:
+Transaction properties (Atomicity, Consistency, Isolation, Durability)
+Commit and rollback operations
+Concurrency control mechanisms
+Day 11: SQL Transactions and Locks
+Objective: Work with transactions and locks.
+
+Topics:
+BEGIN TRANSACTION, COMMIT, and ROLLBACK
+Locks and deadlock handling
+Day 12: Advanced SQL - Views and Triggers
+Objective: Learn advanced SQL features.
+
+Topics:
+Creating and using views
+Creating triggers in SQL
+Using stored procedures
+Day 13: Data Integrity and Constraints
+Objective: Learn about maintaining data integrity.
+
+Topics:
+Constraints: UNIQUE, NOT NULL, CHECK, DEFAULT
+Referential integrity and foreign keys
+Day 14: Review and Practice
+Objective: Review SQL concepts and practice.
+
+Tasks:
+Solve more complex SQL problems
+Focus on joins, normalization, and transactions

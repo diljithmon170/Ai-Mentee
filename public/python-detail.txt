@@ -1,0 +1,672 @@
+Let's break down **Week 1** of the study plan, with an explanation of each day's topics, examples, and definitions:
+
+---
+
+### **Day 1: Introduction to Python and Setup**
+
+**Objective:** Understand Python and set up the environment.
+
+#### **What is Python? Overview and Uses**
+- **Definition:** Python is a high-level, interpreted programming language known for its easy-to-read syntax and wide range of applications. It is used for web development, data science, automation, artificial intelligence, and more.
+- **Example Usage:** Python is often used for creating web applications (e.g., Django, Flask), scientific computing (e.g., NumPy, Pandas), and machine learning (e.g., scikit-learn).
+
+#### **Installing Python and Setting Up an IDE**
+- **Definition:** To write Python code, you need to install the Python interpreter and an Integrated Development Environment (IDE).
+- **Steps:**
+  - Download Python from [python.org](https://www.python.org/downloads/).
+  - Install an IDE like VS Code or PyCharm.
+  - Set up your IDE for Python development by installing Python extensions.
+
+#### **Writing and Running Your First Python Program**
+- **Example Code:**
+  ```python
+  print("Hello, World!")
+  ```
+  - **Explanation:** This simple program prints "Hello, World!" to the console. The `print()` function is used to output text.
+
+#### **Understanding the Python Interpreter and REPL**
+- **Definition:** The Python interpreter executes Python code. The REPL (Read-Eval-Print Loop) allows you to enter Python code interactively in a command-line interface.
+  - Open the terminal/command prompt and type `python` or `python3` to access the REPL.
+  - You can execute one line of code at a time, and the interpreter will immediately show the result.
+
+---
+
+### **Day 2: Python Syntax, Variables, and Data Types**
+
+**Objective:** Learn about variables and basic data types.
+
+#### **Variables in Python and Assignment**
+- **Definition:** A variable is a name that holds a value. In Python, variables don't need explicit declarations. You simply assign values to them.
+- **Example Code:**
+  ```python
+  x = 10  # integer
+  name = "Alice"  # string
+  ```
+  - **Explanation:** The variable `x` is assigned an integer value, and `name` is assigned a string.
+
+#### **Basic Data Types (int, float, str, bool)**
+- **Definition:**
+  - `int` for integers (whole numbers).
+  - `float` for floating-point numbers (decimal numbers).
+  - `str` for strings (text).
+  - `bool` for boolean values (`True` or `False`).
+- **Examples:**
+  ```python
+  num = 5  # int
+  price = 9.99  # float
+  name = "John"  # str
+  is_valid = True  # bool
+  ```
+
+#### **Type Conversion (Casting Between Data Types)**
+- **Definition:** Converting one data type to another using built-in functions like `int()`, `float()`, `str()`.
+- **Example Code:**
+  ```python
+  x = "10"  # string
+  y = int(x)  # convert to integer
+  print(y + 5)  # 15
+  ```
+
+#### **Arithmetic Operations with Variables**
+- **Definition:** Perform mathematical operations like addition, subtraction, multiplication, division, etc.
+- **Example Code:**
+  ```python
+  a = 10
+  b = 3
+  print(a + b)  # 13
+  print(a - b)  # 7
+  print(a * b)  # 30
+  print(a / b)  # 3.333...
+  print(a % b)  # 1 (remainder)
+  ```
+
+---
+
+### **Day 3: Operators in Python**
+
+**Objective:** Get familiar with different operators.
+
+#### **Arithmetic Operators**
+- **Definition:** Operators used to perform basic arithmetic operations.
+- **Examples:**
+  ```python
+  a = 10
+  b = 5
+  print(a + b)  # 15
+  print(a - b)  # 5
+  print(a * b)  # 50
+  print(a / b)  # 2.0
+  print(a % b)  # 0 (remainder)
+  print(a ** b)  # 100000 (a raised to the power of b)
+  ```
+
+#### **Comparison Operators**
+- **Definition:** Operators used to compare values.
+- **Examples:**
+  ```python
+  a = 10
+  b = 5
+  print(a == b)  # False
+  print(a != b)  # True
+  print(a > b)   # True
+  print(a < b)   # False
+  print(a >= b)  # True
+  ```
+
+#### **Logical Operators**
+- **Definition:** Operators that combine multiple boolean expressions.
+- **Examples:**
+  ```python
+  a = True
+  b = False
+  print(a and b)  # False
+  print(a or b)   # True
+  print(not a)    # False
+  ```
+
+#### **Assignment Operators**
+- **Definition:** Operators used to assign values to variables.
+- **Examples:**
+  ```python
+  a = 5
+  a += 3  # equivalent to a = a + 3, a becomes 8
+  a -= 2  # equivalent to a = a - 2, a becomes 6
+  a *= 4  # equivalent to a = a * 4, a becomes 24
+  ```
+
+---
+
+### **Day 4: Control Flow - Conditional Statements**
+
+**Objective:** Understand how to control the flow of a program.
+
+#### **if, elif, else Statements**
+- **Definition:** These statements allow you to execute different blocks of code based on conditions.
+- **Example Code:**
+  ```python
+  age = 20
+  if age >= 18:
+      print("Adult")
+  else:
+      print("Minor")
+  ```
+
+#### **Nested Conditions**
+- **Definition:** Placing one `if` statement inside another.
+- **Example Code:**
+  ```python
+  age = 25
+  if age >= 18:
+      if age >= 21:
+          print("Adult and over 21")
+      else:
+          print("Adult but under 21")
+  else:
+      print("Minor")
+  ```
+
+#### **Logical Operators in Conditions**
+- **Definition:** Using logical operators (`and`, `or`, `not`) to combine multiple conditions.
+- **Example Code:**
+  ```python
+  x = 10
+  y = 5
+  if x > 5 and y < 10:
+      print("Both conditions are true")
+  ```
+
+#### **Practical Examples**
+- **Example Code:**
+  ```python
+  number = 7
+  if number % 2 == 0:
+      print("Even")
+  else:
+      print("Odd")
+
+  temperature = 30
+  if temperature > 25:
+      print("It's hot!")
+  ```
+
+---
+
+### **Day 5: Loops - Introduction**
+
+**Objective:** Learn about loops in Python.
+
+#### **while Loop**
+- **Definition:** Executes a block of code repeatedly as long as the condition is true.
+- **Example Code:**
+  ```python
+  count = 0
+  while count < 5:
+      print(count)
+      count += 1
+  ```
+
+#### **for Loop**
+- **Definition:** Iterates over a sequence (like a list or string) and executes a block of code for each item.
+- **Example Code:**
+  ```python
+  for i in range(5):
+      print(i)
+  ```
+
+#### **The `range()` Function**
+- **Definition:** Generates a sequence of numbers, often used in loops.
+- **Example Code:**
+  ```python
+  for i in range(2, 6):
+      print(i)  # prints 2, 3, 4, 5
+  ```
+
+#### **Looping Through Lists and Strings**
+- **Example Code:**
+  ```python
+  fruits = ["apple", "banana", "cherry"]
+  for fruit in fruits:
+      print(fruit)
+  ```
+
+---
+
+### **Day 6: Loops - Advanced**
+
+**Objective:** Get comfortable with advanced looping concepts.
+
+#### **break, continue, pass**
+- **Definition:**
+  - `break`: Exits the loop prematurely.
+  - `continue`: Skips the current iteration and moves to the next.
+  - `pass`: A placeholder to do nothing.
+- **Examples:**
+  ```python
+  for i in range(5):
+      if i == 3:
+          break  # exit the loop when i is 3
+      print(i)
+
+  for i in range(5):
+      if i == 3:
+          continue  # skip 3
+      print(i)
+  ```
+
+#### **Nested Loops**
+- **Definition:** Loops inside other loops.
+- **Example Code:**
+  ```python
+  for i in range(3):
+      for j in range(2):
+          print(f"i={i}, j={j}")
+  ```
+
+#### **Iterating Over Collections (Lists, Strings, and Ranges)**
+- **Example Code:**
+  ```python
+  colors = ["red", "green", "blue"]
+  for color in colors:
+      print(color)
+  ```
+
+---
+
+### **Day 7: Functions in Python**
+
+**Objective:** Understand the importance of functions and how to use them.
+
+#### **Defining Functions Using `def` Keyword**
+- **Definition:** Functions are reusable blocks of code that perform specific tasks.
+- **Example Code:**
+  ```python
+  def greet(name):
+      print(f"Hello, {name}!")
+  
+  greet("Alice")  # Output: Hello, Alice!
+  ```
+
+#### **Function Arguments and Return Values**
+- **Definition:** Functions can take parameters and return values.
+- **Example Code:**
+  ```python
+  def add(a, b):
+      return a + b
+
+  result = add(5, 3)
+  print(result)  # Output: 8
+  ```
+
+#### **Function Scope (Local and Global Variables)**
+- **Definition:** Variables defined inside a function are local, and variables defined outside are global.
+- **Example Code:**
+  ```python
+  x = 10  # global variable
+
+  def test():
+      x = 5  # local variable
+      print(x)
+
+  test()  # Output: 5
+  print(x)  # Output: 10
+  ```
+
+#### **Writing Simple Functions**
+- **Example Code:**
+  ```python
+  def factorial(n):
+      if n == 0:
+          return 1
+      return n * factorial(n - 1)
+
+  print(factorial(5))  # Output: 120
+  ```
+
+---
+
+This is the breakdown for the first week of the study plan, covering Python basics, operators, loops, and functions.
+
+Let's break down **Week 3** and **Week 4** in detail, focusing on intermediate Python concepts and applying them in mini projects:
+
+---
+
+### **Week 3: Intermediate Python Concepts**
+
+---
+
+### **Day 15: File Handling - Basics**
+
+**Objective:** Learn how to read and write files.
+
+#### **Opening Files (Read, Write, Append Modes)**
+- **Definition:** In Python, you can open files for reading (`r`), writing (`w`), or appending (`a`).
+- **Example Code:**
+  ```python
+  # Open a file for writing
+  file = open('example.txt', 'w')
+  file.write("Hello, World!")
+  file.close()
+  ```
+
+#### **Reading Files (read(), readline(), readlines())**
+- **Definition:** These methods are used to read the content of a file.
+  - `read()`: Reads the entire file.
+  - `readline()`: Reads one line at a time.
+  - `readlines()`: Reads all lines and returns a list.
+- **Example Code:**
+  ```python
+  # Open a file for reading
+  file = open('example.txt', 'r')
+  content = file.read()
+  print(content)
+  file.close()
+  ```
+
+#### **Writing to Files (write(), writelines())**
+- **Definition:** Use `write()` to add content to a file, and `writelines()` to write a list of lines.
+- **Example Code:**
+  ```python
+  file = open('example.txt', 'w')
+  file.write("First line\n")
+  file.writelines(["Second line\n", "Third line\n"])
+  file.close()
+  ```
+
+#### **Closing Files**
+- **Definition:** Always close a file after using it to release system resources.
+- **Example Code:**
+  ```python
+  file.close()
+  ```
+
+---
+
+### **Day 16: File Handling - Advanced**
+
+**Objective:** Work with files in more complex ways.
+
+#### **Using the `with open()` Context Manager**
+- **Definition:** The `with` keyword automatically closes the file once the block of code is executed.
+- **Example Code:**
+  ```python
+  with open('example.txt', 'r') as file:
+      content = file.read()
+      print(content)
+  # No need to explicitly call file.close()
+  ```
+
+#### **File Manipulation (Copy, Rename, Delete)**
+- **Definition:** You can manipulate files using the `os` module.
+- **Example Code:**
+  ```python
+  import os
+  os.rename('example.txt', 'new_example.txt')  # Rename file
+  os.remove('new_example.txt')  # Delete file
+  ```
+
+#### **Reading and Writing Binary Files**
+- **Definition:** Binary files are files that store data in a format other than text (e.g., images, videos).
+- **Example Code:**
+  ```python
+  with open('image.jpg', 'rb') as file:
+      data = file.read()  # Read binary data
+  ```
+
+---
+
+### **Day 17: Error Handling - Exceptions**
+
+**Objective:** Learn how to handle errors in Python.
+
+#### **try, except Blocks**
+- **Definition:** Used to catch and handle exceptions (errors) in your code.
+- **Example Code:**
+  ```python
+  try:
+      result = 10 / 0
+  except ZeroDivisionError:
+      print("Cannot divide by zero!")
+  ```
+
+#### **Handling Multiple Exceptions**
+- **Definition:** You can handle multiple types of exceptions by chaining `except` blocks.
+- **Example Code:**
+  ```python
+  try:
+      num = int(input("Enter a number: "))
+  except ValueError:
+      print("Invalid input, please enter a valid number!")
+  ```
+
+#### **finally Clause**
+- **Definition:** The `finally` block runs no matter what, even if an exception occurs.
+- **Example Code:**
+  ```python
+  try:
+      file = open('example.txt', 'r')
+  except FileNotFoundError:
+      print("File not found!")
+  finally:
+      print("This will always run.")
+  ```
+
+#### **Raising Exceptions Manually (raise keyword)**
+- **Definition:** You can raise exceptions intentionally using the `raise` keyword.
+- **Example Code:**
+  ```python
+  def validate_age(age):
+      if age < 18:
+          raise ValueError("Age must be at least 18")
+      return True
+
+  validate_age(16)  # This will raise an exception
+  ```
+
+---
+
+### **Day 18: Working with Modules and Libraries**
+
+**Objective:** Understand how to import and use libraries.
+
+#### **Importing Standard Libraries**
+- **Definition:** Python comes with a rich set of built-in libraries like `math`, `datetime`, `os`, and `sys`.
+- **Example Code:**
+  ```python
+  import math
+  print(math.sqrt(16))  # Output: 4.0
+  ```
+
+#### **Installing External Libraries with pip**
+- **Definition:** Use `pip` (Python package manager) to install external libraries.
+- **Example Command:**
+  ```
+  pip install requests
+  ```
+
+#### **Creating Your Own Modules**
+- **Definition:** You can create your own Python file (module) and import functions from it.
+- **Example Code:**
+  ```python
+  # mymodule.py
+  def greet(name):
+      return f"Hello, {name}!"
+
+  # In another file
+  from mymodule import greet
+  print(greet("Alice"))
+  ```
+
+#### **Using `import` and `from` Keywords**
+- **Definition:** `import` imports the entire module, while `from` allows importing specific parts of the module.
+- **Example Code:**
+  ```python
+  import math
+  from math import sqrt
+  ```
+
+---
+
+### **Day 19: Object-Oriented Programming (OOP) Basics**
+
+**Objective:** Learn the principles of object-oriented programming.
+
+#### **Introduction to Classes and Objects**
+- **Definition:** Classes are blueprints for creating objects (instances). Objects are instances of classes.
+- **Example Code:**
+  ```python
+  class Person:
+      def __init__(self, name, age):
+          self.name = name
+          self.age = age
+
+  # Creating an object
+  p1 = Person("John", 30)
+  print(p1.name)  # Output: John
+  ```
+
+#### **Instance Variables and Methods**
+- **Definition:** Instance variables store data unique to each object. Methods define actions that objects can perform.
+- **Example Code:**
+  ```python
+  class Car:
+      def __init__(self, brand, model):
+          self.brand = brand
+          self.model = model
+
+      def display_info(self):
+          print(f"{self.brand} {self.model}")
+
+  car1 = Car("Toyota", "Corolla")
+  car1.display_info()  # Output: Toyota Corolla
+  ```
+
+#### **The `self` Keyword**
+- **Definition:** `self` refers to the current instance of the class.
+- **Example Code:**
+  ```python
+  class Dog:
+      def __init__(self, name):
+          self.name = name
+
+      def speak(self):
+          print(f"{self.name} says Woof!")
+
+  dog = Dog("Rex")
+  dog.speak()  # Output: Rex says Woof!
+  ```
+
+---
+
+### **Day 20: Object-Oriented Programming - Advanced**
+
+**Objective:** Dive deeper into OOP concepts.
+
+#### **Constructors (`__init__`)**
+- **Definition:** A special method used to initialize objects.
+- **Example Code:**
+  ```python
+  class Student:
+      def __init__(self, name, age):
+          self.name = name
+          self.age = age
+  ```
+
+#### **Inheritance and Method Overriding**
+- **Definition:** Inheritance allows a class to inherit attributes and methods from another class. Method overriding allows redefining a method in a subclass.
+- **Example Code:**
+  ```python
+  class Animal:
+      def speak(self):
+          print("Animal speaks")
+
+  class Dog(Animal):
+      def speak(self):
+          print("Woof!")
+
+  d = Dog()
+  d.speak()  # Output: Woof!
+  ```
+
+#### **Encapsulation and Abstraction**
+- **Definition:** Encapsulation involves bundling data and methods in one unit. Abstraction hides complex details and shows only the necessary information.
+- **Example Code:**
+  ```python
+  class Car:
+      def __init__(self):
+          self.__engine = "V8"  # private variable
+
+      def start(self):
+          print(f"Starting {self.__engine} engine.")
+
+  car = Car()
+  car.start()  # This works, but we cannot directly access __engine
+  ```
+
+#### **Polymorphism in Python**
+- **Definition:** Polymorphism allows using a single interface to represent different types.
+- **Example Code:**
+  ```python
+  class Bird:
+      def fly(self):
+          print("Flying")
+
+  class Airplane:
+      def fly(self):
+          print("Airplane flying")
+
+  def take_off(flyable):
+      flyable.fly()
+
+  bird = Bird()
+  airplane = Airplane()
+
+  take_off(bird)  # Output: Flying
+  take_off(airplane)  # Output: Airplane flying
+  ```
+
+---
+
+### **Day 21: Review and Practice**
+
+**Objective:** Review all topics learned so far and practice solving problems.
+
+#### **Tasks:**
+- Solve coding problems on platforms like HackerRank or LeetCode (beginner to intermediate level).
+- Practice exercises on file handling, error handling, OOP, and module usage.
+
+---
+
+### **Week 4: Applying Python Knowledge and Mini Projects**
+
+---
+
+### **Day 22-23: Mini Project 1 - Basic Calculator**
+
+**Objective:** Create a simple calculator program.
+
+#### **Tasks:**
+- Implement basic arithmetic operations (addition, subtraction, multiplication, division).
+- Handle invalid inputs with error handling.
+- Allow the user to perform multiple calculations in one run.
+
+---
+
+### **Day 24-25: Mini Project 2 - To-Do List Application**
+
+**Objective:** Build a to-do list application.
+
+#### **Tasks:**
+- Add, view, and delete tasks.
+- Store tasks in a text file.
+- Use functions to handle task operations.
+
+---
+
+### **Day 26-27: Mini Project 3 - Number Guessing Game**
+
+**Objective:** Build a number guessing game.
+
+#### **Tasks:**
+- Generate a random number and prompt the user to guess.
+- Provide hints if the guess is too high or too low.
+- Track the number of attempts and display
