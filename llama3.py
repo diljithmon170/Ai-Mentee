@@ -1,20 +1,10 @@
-
-
-
-
-
-
-
-
-
-
+import os
 import tempfile
 import pandas as pd
-from datasets import load_dataset
-from transformers import LlamaTokenizer, LlamaForCausalLM, Trainer, TrainingArguments, pipeline
 import requests
 from bs4 import BeautifulSoup
-import os
+from datasets import load_dataset
+from transformers import AutoTokenizer, AutoModelForCausalLM, Trainer, TrainingArguments, pipeline
 
 # List of URLs to scrape
 urls = [
@@ -22,132 +12,104 @@ urls = [
     "https://www.javatpoint.com/",
     "https://www.tutorialspoint.com/",
     "https://www.freecodecamp.org/",
-    "https://www.coursebox.ai/"
-    
+    "https://www.kaggle.com/learn/intro-to-machine-learning",
+    "https://www.geeksforgeeks.org/python/",
+    "https://www.geeksforgeeks.org/java/",
+    "https://www.geeksforgeeks.org/dbms/",
+    "https://www.geeksforgeeks.org/ml/",
+    "https://www.codecademy.com/learn/learn-python/",
+    "https://www.codecademy.com/learn/learn-java/"
 ]
 
-# Function to scrape data from a URL 
-#using beautifulsoup
+# Function to scrape data from a URL using BeautifulSoup
 def scrape_url(url):
-    response = requests.get(url)
-    soup = BeautifulSoup(response.content, "html.parser")
-    
-    
-    paragraphs = soup.find_all()
-    text_data = [para.get_text() for para in paragraphs]
-    return text_data
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, "html.parser")
+        paragraphs = soup.find_all("p")
+        text_data = [para.get_text() for para in paragraphs]
+        return text_data
+    except requests.RequestException as e:
+        print(f"Error scraping {url}: {e}")
+        return []
 
 # Scrape data from all URLs
 all_text_data = []
 for url in urls:
-    text_data = scrape_url(url)
-    all_text_data.extend(text_data) 
+    all_text_data.extend(scrape_url(url))
 
 # Save the scraped data to a DataFrame
 df_scraped = pd.DataFrame(all_text_data, columns=["text"])
 
-# Save the scraped data to a CSV file
 df_scraped.to_csv("scraped_data.csv", index=False)
 
-# Load the Kaggle dataset
-dataset1 = pd.read_csv("dataset1.csv")  # Replace with your actual Kaggle dataset path
-
-# Convert both CSV datasets to .txt files for use in Hugging Face Trainer
-dataset1['text'].to_csv('dataset1.txt', index=False, header=False)
-df_scraped['text'].to_csv('dataset2.txt', index=False, header=False)
-
-# Load the datasets as text format
+# Load datasets
 dataset1 = load_dataset('text', data_files={'train': 'dataset1.txt'})
-dataset2 = load_dataset('text', data_files={'train': 'dataset2.txt'})
+dataset2 = load_dataset('text', data_files={'train': 'scraped_data.csv'})
 
-# Combine the datasets
-dataset_combined = dataset1['train'].concatenate(dataset2['train'])
+# Combine datasets
+dataset_combined = dataset1["train"].concatenate(dataset2["train"])
 
-# Load pretrained LLaMA 2-7B model and tokenizer
-model_name = "meta-llama/Llama-2-7b"
-tokenizer = LlamaTokenizer.from_pretrained(model_name)
-model = LlamaForCausalLM.from_pretrained(model_name)
+# Load LLaMA 3 model and tokenizer
+model_name = "meta-llama/Llama-3-8b"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name)
 
-# Move the model to CPU
-model.to('cpu')
-
-# Pre-processing the dataset
+# Preprocessing function
 def preprocess_function(examples):
     return tokenizer(examples['text'], truncation=True, padding="max_length", max_length=2048)
 
-# Apply preprocessing to the combined dataset
+# Encode dataset
 encoded_dataset = dataset_combined.map(preprocess_function, batched=True)
 
 # Fine-tuning arguments
 training_args = TrainingArguments(
-    output_dir="./fine_tuned_llama",  # Output directory for the fine-tuned model
+    output_dir="./fine_tuned_llama3",
     evaluation_strategy="steps",
-    logging_dir="./logs",             # Log directory
-    per_device_train_batch_size=2,    # Smaller batch size for CPU
-    per_device_eval_batch_size=2,     # Smaller batch size for CPU
-    num_train_epochs=3,               # Number of epochs for fine-tuning
-    save_steps=500,                   # Save model every 500 steps
-    logging_steps=100,                # Log every 100 steps
-    save_total_limit=2,               # Keep only the 2 most recent saved models
-    remove_unused_columns=False,      # Keep unused columns in the dataset
-    fp16=False,                       # Do not use FP16 precision (not needed on CPU)
+    logging_dir="./logs",
+    per_device_train_batch_size=2,
+    per_device_eval_batch_size=2,
+    num_train_epochs=3,
+    save_steps=500,
+    logging_steps=100,
+    save_total_limit=2,
+    remove_unused_columns=False,
+    fp16=False,
 )
 
-# Initialize the Trainer
+# Trainer initialization
 trainer = Trainer(
     model=model,
     args=training_args,
-    train_dataset=encoded_dataset,  # Use the combined dataset
+    train_dataset=encoded_dataset,
 )
 
-# Fine-tune the model
+# Train the model
 trainer.train()
 
-# Save the fine-tuned model and tokenizer
-model.save_pretrained("./fine_tuned_llama")
-tokenizer.save_pretrained("./fine_tuned_llama")
+# Save the fine-tuned model
+model.save_pretrained("./fine_tuned_llama3")
+tokenizer.save_pretrained("./fine_tuned_llama3")
 
-
-
-
-
-def generate_text(subject, level, topic):
+# Function to generate structured learning lessons
+def generate_learning_lesson(subject, level, topic):
+    print("Welcome to AI MENTEE - Your AI Tutor!")
     
+    # Format prompt for lesson generation
+    prompt = f"Generate a detailed learning lesson on {topic} for {level} level students in {subject}. Include explanations, examples, and exercises."
     
-    print("Welcome to AI MENTEE- your tutor!")
-     
+    # Initialize text generation pipeline
+    generator = pipeline("text-generation", model=model, tokenizer=tokenizer, device=-1)
     
-    subject = input("\nEnter the subject (Python, Java, DBMS, AI): ").strip().lower()
+    # Generate lesson
+    generated_text = generator(prompt, max_length=2048, num_return_sequences=1)[0]["generated_text"]
     
+    # Save the lesson to a file
+    filename = f"{subject}_{level}_{topic}.txt"
+    with open(filename, "w") as file:
+        file.write(generated_text)
     
-    difficulty = input("\n\nEnter the difficulty level (Beginner, Intermediate, Advanced): ").strip().lower()
-    
-    
-    
-    # Using the fine-tuned model for text generation
-    generator = pipeline("text-generation", model=model, tokenizer=tokenizer, device=-1)  # device=-1 for CPU
-
-    # Generate text with the fine-tuned model
-    generated_text = generator(subject,difficulty,num_return_sequences=1)[0]["generated_text"]
-    # Dynamically create the filename
-    filename = f"{subject}-{level}-{topic}.txt"
-    
-    # Create a temporary file to save the generated text with dynamic name
-    with open(filename, "w") as temp_file:
-        temp_file.write(generated_text)
-
-    os.remove(filename)
-
-
-
-generate_text(subject, level, topic)
-
-        
-        
-
-
-
-
-
-
+    print(f"Lesson saved as {filename}")
+    return filename
 
