@@ -76,7 +76,26 @@ def quiz_view(request, course):
         'course': course,
         'course_display_name': course_display_name
     })
+def generate_content(request):
+    if request.method == 'POST':
+        subject = request.POST.get('subject')
+        level = request.POST.get('level')
 
+        # 1. Generate text content using LLaMA
+        text_content = llama.generate_text(subject, level)
+
+        # 2. Convert text to speech
+        audio_path = tts.text_to_speech(text_content)
+
+        # 3. Convert text to video
+        video_path = ttv.text_to_video(text_content)
+
+        return render(request, 'dashboard/content.html', {
+            'text': text_content,
+            'audio': audio_path,
+            'video': video_path,
+        })
+        
 @login_required
 def text_view(request, course_name, level, file_number=1):
     """Render the text content page with navigation for files."""
