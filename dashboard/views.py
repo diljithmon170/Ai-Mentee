@@ -94,7 +94,7 @@ def generate_content(request):
             'text': text_content,
             'audio': audio_path,
             'video': video_path,
-        })
+        })
         
 @login_required
 def text_view(request, course_name, level, file_number=1):
