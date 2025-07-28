@@ -17,15 +17,13 @@ urls = [
     "https://www.geeksforgeeks.org/python/",
     "https://www.geeksforgeeks.org/ai/",
     "https://www.geeksforgeeks.org/dbms/",
-    "https://www.geeksforgeeks.org/ml/"
+    "https://www.geeksforgeeks.org/ml/",  # Fixed missing comma
     "https://www.tutorialspoint.com/python",
     "https://www.tutorialspoint.com/ai",
     "https://www.tutorialspoint.com/ml",
     "https://www.tutorialspoint.com/dbms",
     "https://www.w3schools.com/python",
-    "https://www.w3schools.com/ai",
-    "https://www.w3schools.com/ml",
-    "https://www.w3schools.com/dbms",
+    # Removed invalid URLs: "https://www.w3schools.com/ml", "https://www.w3schools.com/dbms"
     "https://www.javatpoint.com/python",
     "https://www.javatpoint.com/ai",
     "https://www.javatpoint.com/dbms",
