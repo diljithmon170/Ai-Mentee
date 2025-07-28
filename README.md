@@ -1,4 +1,4 @@
-# Ai-Mentee
+# Ai-Mentee AI based LMS
 
 Ai-Mentee is an online learning platform designed to provide personalized learning experiences. It allows users to explore courses, manage their profiles, and track their learning progress. Built using Django, Ai-Mentee leverages modern web technologies to deliver a seamless and interactive user experience.
 
